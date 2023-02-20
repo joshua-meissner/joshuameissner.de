@@ -1,0 +1,23 @@
+<header id="top" class="header py3 px3 lg-px4">
+  <div class="wrapper">
+    {% if page.url == "/" %}
+    <h1 class="m0 inline-block"><a class="site-title" href="{{ site.baseurl }}/" alt="{{ site.title }} logo">J – M</a></h1>
+    <ul class="navigation m0 right list-reset">
+      <li class="inline-block"><a href="{{ site.baseurl }}/" class="active">Work</a></li>
+      <li class="inline-block"><a href="{{ site.baseurl }}/about.html">About</a></li>
+    </ul>
+    {% elsif page.url == "/about" %}
+    <h1 class="m0 inline-block"><a class="site-title" href="{{ site.baseurl }}/" alt="{{ site.title }} logo">J – M</a></h1>
+    <ul class="navigation m0 right list-reset">
+      <li class="inline-block"><a href="{{ site.baseurl }}/">Work</a></li>
+      <li class="inline-block"><a href="{{ site.baseurl }}/about.html" class="active">About</a></li>
+    </ul>
+    {% else %}
+    <h1 class="m0 inline-block"><a class="site-title" href="{{ site.baseurl }}/" alt="{{ site.title }} logo">{{ site.title }}</a></h1>
+    <ul class="navigation m0 right list-reset">
+      <li class="inline-block"><a href="{{ site.baseurl }}/">Work</a></li>
+      <li class="inline-block"><a href="{{ site.baseurl }}/about.html">About</a></li>
+    </ul>
+    {% endif %}
+  </div>
+</header>

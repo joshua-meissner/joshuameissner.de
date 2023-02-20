@@ -1,0 +1,21 @@
+---
+layout: page
+title: Joshua Meissner – writer and photographer
+permalink: /
+---
+<div class="intro pb4">
+  <p class="about large intro"><strong>Joshua Meissner</strong> is a freelance writer, photographer, and engineer based in Berlin. Currently, he's on tour, exploring Europe by bike. </p>
+</div>
+{% assign projects = site.projects | sort: 'order' %}
+{% for project in projects %}
+<div class="project-container">
+  <a href="{{ project.url }}" class="no_border">
+  <img src="projects/{{ project.picture }}" class="image" alt="{{ project.title }} – {{ project.headline }}" style="width: 100%;"/>
+    <div class="overlay-outer">
+      <div class="overlay-inner">
+        <div class="project-title"><h2 class="h1">{{ project.title }}</h2></div>
+      </div>
+    </div>
+  </a>
+</div>
+{% endfor %}

@@ -1,0 +1,394 @@
+@charset "utf-8";
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "webfont";
+@import "mailchimp";
+@import "helpers";
+
+// Typography
+$base-font-family: "Lelo-Regular","Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;
+$base-font-weight: 400;
+$heading-font-family: "Lelo-Bold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+$heading-font-weight: 700;
+
+$base-font-color: #111;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+
+// Global Styles
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  letter-spacing: 1px;
+  color: $base-font-color;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern"1;
+  -moz-font-feature-settings: "kern"1;
+  -o-font-feature-settings: "kern"1;
+  font-feature-settings: "kern"1;
+  font-kerning: normal;
+}
+
+.page {
+  min-height: 100%;
+  margin-bottom: -2rem;
+}
+
+.footer,
+.push {
+  height: 2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+.strong {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
+}
+
+.h0, .larger {
+  font-size: 3rem;
+  line-height: 1.0;
+  margin: 0;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+
+  @include for-phone-only {
+    font-size: 1rem;
+    line-height: 1.0;
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+}
+
+h1, .h1, .large {
+  font-size: 2rem;
+
+  @include for-phone-only {
+    font-size: 1rem;
+  }
+
+}
+
+p,
+dl,
+ol,
+ul,
+pre,
+blockquote,
+hr {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid;
+}
+
+a {
+  transition: color 0.4s;
+  text-decoration: none;
+  color: #111;
+  font-family: $base-font-family;
+  border-bottom: 3px solid #111;
+
+  @include for-phone-only{
+    border-bottom: 2px solid #111;
+  }
+}
+
+a:hover {
+  text-decoration: none;
+  color: #0000ee;
+  border-bottom: 3px solid #0000ee;
+
+  @include for-phone-only {
+    border-bottom: 2px solid #0000ee;
+  }
+}
+
+// Resposive Images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Site title
+a.site-title {
+  font-family: $heading-font-family;
+  border-bottom: none;
+}
+
+a.site-title:hover {
+  border-bottom: 3px solid #0000ee;
+
+  @include for-phone-only {
+    border-bottom: 2px solid #0000ee;
+  }
+}
+
+a.no_border {
+  border-bottom: none;
+}
+
+a:active {
+  transition: color 0.3s;
+  color: #007be6;
+}
+
+// Header Styles
+.header,
+.page,
+.footer {
+  margin: 0 auto;
+  max-width: 105rem; // 1920px = 120rem, 1680px = 105rem, 1280px = 80rem
+}
+
+.header-wrapper {
+  background-color: #fff;
+  z-index: 100;
+}
+
+// Main Navigation
+ul.navigation {
+  font-size: 2rem;
+
+  @include for-phone-only {
+    font-size: 1rem;
+  }
+
+  li {
+    margin-left: 0.5em;
+    margin-right: 0em;
+
+    a {
+      border-bottom: none;
+      &.active {
+        border-bottom: 3px solid #111;
+        @include for-phone-only {
+          border-bottom: 2px solid #111;
+        }
+      }
+    }
+
+    a:hover {
+      border-bottom: 3px solid #0000ee;
+
+      @include for-phone-only {
+        border-bottom: 2px solid #0000ee;
+      }
+    }
+  }
+}
+
+// Intro Text
+.intro {
+  max-width: 58rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+// Project Styles for Index
+.project-container {
+  position: relative;
+  @include fluid-aspect(16 9);
+  overflow: hidden;
+  margin-bottom: 2rem;
+
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+  }
+
+
+  .overlay-outer {
+    position: absolute;
+    transition: 0.5s ease;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #111;
+  }
+
+  .overlay-inner {
+    position: absolute;
+    transition: 0.5s ease;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 5;
+  }
+
+  &:hover .image {
+    opacity: 0.9;
+  }
+
+  &:hover .overlay-outer {
+    opacity: 0.9;
+  }
+
+  &:hover .overlay-inner {
+    opacity: 1;
+  }
+
+  .project-title {
+    color: white;
+  }
+}
+
+// Project Styles for Project Pages
+.post-content {
+  .intro, .copy {
+    max-width: 58rem;
+  }
+  p {
+    font-size: 2rem;
+    max-width: 64rem;
+    @include for-phone-only {
+      font-size: 1rem;
+    }
+  }
+  p.image-content {
+    max-width: 105rem;
+  }
+
+
+  ul.cv {
+
+    .time-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .timeline_title h2 {
+      line-height: $base-line-height;
+    }
+
+    .time_period p {
+      color: #555;
+    }
+  }
+
+  ul.cv li {
+
+    &:hover {
+      background-color: #f3f3f3;
+    }
+  }
+
+  img {
+    vertical-align: middle;
+    margin-bottom: 2rem;
+  }
+}
+
+// Images with 16x9 Aspect-Ratio
+.fluid-aspect_16x9 {
+  @include fluid-aspect(16 9);
+  margin-bottom: 2rem;
+  overflow: hidden;
+
+  img {
+    vertical-align: middle;
+    width: 100%;
+  }
+}
+
+// Video Embeds
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// Circular Profile Image
+.image-cropper {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  border: none;
+  box-shadow: none;
+}
+
+.profile-image-container {
+  margin-top: 10rem;
+
+  @include for-phone-only {
+    margin-top: 4rem;
+  }
+}
+
+.profile-image {
+  display: inline;
+  margin: 0 auto;
+  //margin-left: -25%; //centers the image
+  height: 100%;
+  width: auto;
+}
+
+// About page spacing
+.about {
+  margin-bottom: 1.5rem;
+}
+.experience, .education, .awards, .exhibitions {
+  margin-bottom: 5.5rem;
+}

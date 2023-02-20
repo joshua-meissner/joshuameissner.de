@@ -1,0 +1,26 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+  {% include header.html %}
+  <div class="page py3 px3 lg-px4">
+    <div class="page-inner">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+    <div class="push"></div>
+  </div>
+  <div class="footer py1 px3 lg-px4">
+    {% include footer.html %}
+  </div>
+
+  </body>
+
+</html>

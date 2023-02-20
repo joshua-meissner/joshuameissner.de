@@ -1,0 +1,30 @@
+# Site settings
+title: Joshua Meissner
+email: mail@joshuameissner.de
+description: > # this means to ignore newlines until "baseurl:"
+Joshua Meissner is a freelance writer, photographer, and engineer based in Berlin.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: https://joshuameissner.de   # with the https protocol
+enforce_ssl: joshuameissner.de  # without any protocol
+twitter:
+  username: 
+
+# jekyll collections
+collections:
+  projects:
+    output: true
+
+# Google site verification
+google_verification: 
+
+# Build settings
+markdown: kramdown
+
+# SASS settings
+sass:
+    style: compressed
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-target-blank
