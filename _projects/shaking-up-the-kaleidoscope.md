@@ -4,7 +4,7 @@ title: Shaking Up the Kaleidoscope
 class:  ganztoll
 headline: story
 picture: ../uploads/scandinavia-joshua_meissner-68.jpg
-order: 3
+order: 1
 ---
 **Scandinavia – 2021**
 

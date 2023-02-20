@@ -4,7 +4,7 @@ title: Inside Schmidt Maschinenbau
 class:  ganztoll
 headline: company profile
 picture: ../uploads/SON-Field-Trip-Joshua_Meissner-143.jpg
-order: 1
+order: 2
 ---
 **Tübingen, Germany – 2022**
 
