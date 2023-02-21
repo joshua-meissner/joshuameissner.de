@@ -58,8 +58,8 @@
     text-transform: uppercase;
     display: inline-block; }
     #mc_embed_signup input[type="submit"]:hover {
-      border: 3px solid #0000EE;
-      background: #0000EE; }
+      border: 3px solid #a36200;
+      background: #a36200; }
   #mc_embed_signup ::-webkit-input-placeholder {
     color: #CCC; }
   #mc_embed_signup :-moz-placeholder {
@@ -166,11 +166,11 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #0000ee;
-  border-bottom: 3px solid #0000ee; }
+  color: #a36200;
+  border-bottom: 3px solid #a36200; }
   @media (max-width: 40em) {
     a:hover {
-      border-bottom: 2px solid #0000ee; } }
+      border-bottom: 2px solid #a36200; } }
 
 img {
   max-width: 100%;
@@ -181,10 +181,10 @@ a.site-title {
   border-bottom: none; }
 
 a.site-title:hover {
-  border-bottom: 3px solid #0000ee; }
+  border-bottom: 3px solid #a36200; }
   @media (max-width: 40em) {
     a.site-title:hover {
-      border-bottom: 2px solid #0000ee; } }
+      border-bottom: 2px solid #a36200; } }
 
 a.no_border {
   border-bottom: none; }
@@ -220,10 +220,10 @@ ul.navigation {
           ul.navigation li a.active {
             border-bottom: 2px solid #111; } }
     ul.navigation li a:hover {
-      border-bottom: 3px solid #0000ee; }
+      border-bottom: 3px solid #a36200; }
       @media (max-width: 40em) {
         ul.navigation li a:hover {
-          border-bottom: 2px solid #0000ee; } }
+          border-bottom: 2px solid #a36200; } }
 
 .intro {
   max-width: 58rem; }
@@ -363,5 +363,11 @@ ul.navigation {
 
 .experience, .education, .awards, .exhibitions {
   margin-bottom: 5.5rem; }
+  
+.copyright {
+font-size: 3rem;
+margin-top: -2rem;
+}
+
 
 /*# sourceMappingURL=style.css.map */

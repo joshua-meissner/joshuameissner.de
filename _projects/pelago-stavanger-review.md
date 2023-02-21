@@ -16,9 +16,6 @@ With bikepacking bags by <a href="https://www.gramm-tourpacking.com/" target="_b
 ![tollesbild](../uploads/Pelago-Stavanger-Joshua_Meissner-23.jpg)
 ![tollesbild](../uploads/Pelago-Stavanger-Joshua_Meissner-40.jpg)
 ![tollesbild](../uploads/Pelago-Stavanger-Joshua_Meissner-123.jpg)
-{: class="image-content"}
-<p>Photo courtesy of Natasha Meissner</p>
-{: class="copy"}
 ![tollesbild](../uploads/Pelago-Stavanger-Joshua_Meissner-155.jpg)
 ![tollesbild](../uploads/Pelago-Stavanger-Joshua_Meissner-174.jpg)
 ![tollesbild](../uploads/Pelago-Stavanger-Joshua_Meissner-201.jpg)
